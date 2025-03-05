@@ -569,35 +569,55 @@ body {
     }
 }
 * {
-    max-width: 100%;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Elakkan skrol sisi */
+    overflow-x: hidden; /* Elak skrol sisi */
+    margin: 0;
+    padding: 0;
 }
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-.main-table {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-}
 @media (max-width: 768px) {
     .services-container, .review-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Pastikan tidak melebihi skrin */
+        width: 100%;
+        max-width: 100%;
     }
 
     .service-box, .review-box {
-        width: 90%; /* Pastikan lebar tidak melebihi */
+        width: 90%; /* Pastikan tidak melebihi skrin */
         max-width: 400px; 
+    }
+}
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
