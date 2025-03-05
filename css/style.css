@@ -1,3 +1,4 @@
+
 /* General Styles */
 
 html {
@@ -19,8 +20,11 @@ body {
 .main-table {
     width: 100%;
     max-width: 100%;
-    table-layout: fixed; /* Elak table jadi lebih besar dari skrin */
+    table-layout: fixed; 
+    overflow-x: auto;
+    display: block;
 }
+
 
 .header {
     position: fixed;
@@ -561,15 +565,6 @@ body {
     max-width: 100%;
 }
 
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden; 
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-}
-
 
 img {
     max-width: 100%;
@@ -584,8 +579,9 @@ img {
         align-items: center;
         width: 100%;
         max-width: 100%;
-        min-height: 100vh; /* Pastikan ia penuh skrin */
     }
+}
+
 
     .service-box, .review-box {
         width: 90%; /* Pastikan tidak melebihi skrin */
@@ -600,17 +596,12 @@ img {
         max-width: 100%;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
-        position: absolute;
+        position: fixed;
         top: 60px;
         left: 0;
         z-index: 1000;
     }
-
-    .navigation.active {
-        display: flex;
-    }
 }
-
     .navigation.active {
         display: flex;
     }
@@ -619,13 +610,35 @@ img {
         flex-direction: column;
         gap: 10px;
     }
+}
+
 body {
-    padding-top: 120px; /* Elak kandungan tersembunyi di bawah header */
+    padding-top: 120px; 
 }
 {
     box-sizing: border-box;
-    max-width: 100%; /* Pastikan semua elemen tidak lebih besar dari skrin */
+    max-width: 100%; 
 }
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden; 
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important; 
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 
 
