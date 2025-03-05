@@ -18,8 +18,10 @@ body {
 /* Main Table */
 .main-table {
     width: 100%;
-    border-collapse: collapse;
+    max-width: 100%;
+    table-layout: fixed; /* Elak table jadi lebih besar dari skrin */
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -545,20 +547,6 @@ body {
         border-radius: 10px;
     }
 
-
-@media (max-width: 768px) {
-    .navigation {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1000;
-    }
-
     .navigation.active {
         display: flex;
     }
@@ -576,14 +564,18 @@ body {
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: auto; 
+    overflow-x: hidden; 
     overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
+
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+
 }
 @media (max-width: 768px) {
     .services-container, .review-container {
@@ -605,6 +597,7 @@ img {
         display: none;
         flex-direction: column;
         width: 100%;
+        max-width: 100%;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
         position: absolute;
@@ -616,6 +609,11 @@ img {
     .navigation.active {
         display: flex;
     }
+}
+
+    .navigation.active {
+        display: flex;
+    }
 
     .nav-links {
         flex-direction: column;
@@ -623,6 +621,10 @@ img {
     }
 body {
     padding-top: 120px; /* Elak kandungan tersembunyi di bawah header */
+}
+{
+    box-sizing: border-box;
+    max-width: 100%; /* Pastikan semua elemen tidak lebih besar dari skrin */
 }
 
 
