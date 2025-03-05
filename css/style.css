@@ -458,42 +458,13 @@ html, body {
     right: 20px;
     z-index: 1001;
 }
-@media (max-width: 768px) {
-    .services-container, .review-container {
-        flex-direction: column; /* Stack items */
-        align-items: center; /* Center horizontally */
-        justify-content: center;
-    }
 
-    .service-box, .review-box {
-        width: 90%; /* Ensures full-width without zoom-out */
-        max-width: 400px;
-        text-align: center;
-    }
-}
-
-}
 
 /* Set default 3-column layout for desktop */
 .service-box, .review-box {
     width: calc(33.333% - 20px);
     max-width: 400px;
     min-width: 250px;
-}
-
-/* Switch to 1-column on mobile */
-@media (max-width: 768px) {
-    .service-box, .review-box {
-        width: 90%;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        line-height: 1.5;
-    }
 }
 
 .address-container {
@@ -527,12 +498,7 @@ html, body {
     z-index: 1001;
 }
 
-/* Show menu button on mobile */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-}
+
 
 /* Mobile Navigation */
 .navigation {
@@ -576,48 +542,81 @@ html, body {
     max-width: 100%;
 }
 @media (max-width: 768px) {
-    .banner-content img {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain;
-    }
-}
-
-
-    .banner-content img {
-        height: auto;
-        max-width: 100%;
-        object-fit: contain; /* Keeps full image visible */
-    }
-}@media (max-width: 768px) {
-    .map-container iframe {
-        width: 100%;
-        height: auto;
-        max-width: 90%;
-    }
-
-    .footer-container {
+    /* Navigation Menu */
+    .nav-container {
         flex-direction: column;
         text-align: center;
     }
-}
-@media (max-width: 768px) {
+    
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
     .navigation {
-        text-align: center;
+        display: none;
+        flex-direction: column;
         width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+    }
+
+    .navigation.active {
+        display: flex;
     }
 
     .nav-links {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 
     .nav-links a {
         width: 100%;
-        text-align: center;
         padding: 10px 0;
+    }
+
+    /* Banner */
+    .banner {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .banner-content img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Services & Reviews */
+    .services-container,
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box,
+    .review-box {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    /* Location Section */
+    .location-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
     }
 }
 
