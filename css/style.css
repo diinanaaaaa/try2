@@ -568,6 +568,38 @@ body {
         gap: 10px;
     }
 }
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Elakkan skrol sisi */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.main-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+@media (max-width: 768px) {
+    .services-container, .review-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Pastikan tidak melebihi skrin */
+    }
+
+    .service-box, .review-box {
+        width: 90%; /* Pastikan lebar tidak melebihi */
+        max-width: 400px; 
+    }
+}
 
 
 
