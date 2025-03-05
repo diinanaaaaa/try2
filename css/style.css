@@ -20,10 +20,12 @@ body {
 .main-table {
     width: 100%;
     max-width: 100%;
-    table-layout: fixed; 
-    overflow-x: auto;
+    table-layout: fixed;
     display: block;
+    overflow: hidden;
+    white-space: nowrap;
 }
+
 
 
 .header {
@@ -35,6 +37,10 @@ body {
     z-index: 1000; /* Ensures it stays on top of everything */
     padding: 15px 0;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red racing-themed shadow */
+	
+}
+body {
+    padding-top: 120px; /* Pastikan kandungan tidak tersembunyi di bawah header */
 }
 
 
@@ -580,14 +586,21 @@ img {
         width: 100%;
         max-width: 100%;
     }
-}
-
 
     .service-box, .review-box {
-        width: 90%; /* Pastikan tidak melebihi skrin */
-        max-width: 400px; 
+        width: 90%; /* Pastikan ia tidak lebih besar dari skrin */
+        max-width: 400px;
+        margin-bottom: 20px; /* Elak terlalu rapat */
+    }
 
+    .service-box img, .review-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 }
+
+
 @media (max-width: 768px) {
     .navigation {
         display: none;
@@ -601,7 +614,7 @@ img {
         left: 0;
         z-index: 1000;
     }
-}
+
     .navigation.active {
         display: flex;
     }
@@ -619,7 +632,7 @@ body {
     box-sizing: border-box;
     max-width: 100%; 
 }
-* {
+{
     box-sizing: border-box;
     max-width: 100%;
     overflow-x: hidden; 
@@ -633,6 +646,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 img, iframe {
     max-width: 100%;
     height: auto;
