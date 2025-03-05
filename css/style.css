@@ -544,7 +544,7 @@ body {
         height: auto;
         border-radius: 10px;
     }
-}
+
 
 @media (max-width: 768px) {
     .navigation {
@@ -567,7 +567,7 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-}
+
 * {
     box-sizing: border-box;
     max-width: 100%;
@@ -575,10 +575,11 @@ body {
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Elak skrol sisi */
-    margin: 0;
-    padding: 0;
+    max-width: 100%;
+    overflow-x: auto; 
+    overflow-y: auto;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -591,12 +592,13 @@ img {
         align-items: center;
         width: 100%;
         max-width: 100%;
+        min-height: 100vh; /* Pastikan ia penuh skrin */
     }
 
     .service-box, .review-box {
         width: 90%; /* Pastikan tidak melebihi skrin */
         max-width: 400px; 
-    }
+
 }
 @media (max-width: 768px) {
     .navigation {
@@ -619,7 +621,10 @@ img {
         flex-direction: column;
         gap: 10px;
     }
+body {
+    padding-top: 120px; /* Elak kandungan tersembunyi di bawah header */
 }
+
 
 
 
