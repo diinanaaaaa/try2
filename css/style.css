@@ -1,4 +1,3 @@
-
 /* General Styles */
 
 html {
@@ -19,69 +18,9 @@ body {
 /* Main Table */
 .main-table {
     width: 100%;
-    max-width: 100%;
-    table-layout: fixed;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
+    border-collapse: collapse;
 }
 
-
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95); /* Dark transparent background */
-    z-index: 1000; /* Ensures it stays on top of everything */
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red racing-themed shadow */
-	
-}
-body {
-    padding-top: 120px; /* Pastikan kandungan tidak tersembunyi di bawah header */
-}
-
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.logo img {
-    height: 50px; /* Adjust based on your logo size */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    transition: 0.3s;
-    border-bottom: 2px solid transparent;
-}
-
-.nav-links a:hover {
-    border-bottom: 2px solid #ff0000; /* Racing red hover effect */
-}
 
 /* Adjust content to avoid being hidden behind the fixed header */
 body {
@@ -109,30 +48,7 @@ body {
     width: 150px;
 }
 
-/* Navigation */
-.navigation .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s;
-    padding: 8px 15px;
-}
-
-.nav-links a:hover {
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000;
-}
 
 /* Contact Buttons */
 .contact-info .btn {
@@ -195,22 +111,23 @@ body {
     }
 
     /* Navigation Styles */
-    .navigation {
-        display: none; /* Initially hidden */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 15px 0;
-        text-align: center;
-        z-index: 1000;
-    }
+   .navigation {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
 
-    .navigation.active {
-        display: flex;
-    }
+.navigation.active {
+    display: flex; /* Shows menu when toggled */
+}
+
 
     .nav-links {
         flex-direction: column;
@@ -515,146 +432,116 @@ body {
     font-size: 14px;
     color: gray;
 }
-.fixed-contact {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.fixed-contact .btn {
-    padding: 12px 18px;
-    font-size: 14px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 150px; /* Pastikan lebar konsisten */
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .services-container, .review-container {
-        display: flex;
-        flex-direction: column; /* Susunan satu per satu */
-        gap: 20px;
-        align-items: center; /* Pusatkan kandungan */
-    }
-
-    .service-box, .review-box {
-        width: 90%; /* Saiz lebih sesuai untuk mobile */
-        max-width: 400px; /* Hadkan lebar */
-    }
-
-    .service-box img, .review-box img {
-        width: 100%; /* Pastikan imej responsif */
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .navigation.active {
-        display: flex;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-
-}
-@media (max-width: 768px) {
-    .services-container, .review-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .service-box, .review-box {
-        width: 90%; /* Pastikan ia tidak lebih besar dari skrin */
-        max-width: 400px;
-        margin-bottom: 20px; /* Elak terlalu rapat */
-    }
-
-    .service-box img, .review-box img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .navigation {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        max-width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        z-index: 1000;
-    }
-
-    .navigation.active {
-        display: flex;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-body {
-    padding-top: 120px; 
-}
-{
-    box-sizing: border-box;
-    max-width: 100%; 
-}
-{
-    box-sizing: border-box;
-    max-width: 100%;
-    overflow-x: hidden; 
-}
 
 html, body {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important; 
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
     overflow-y: auto;
     margin: 0;
     padding: 0;
 }
 
-img, iframe {
-    max-width: 100%;
-    height: auto;
+.menu-toggle {
     display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+}
+.services-container, .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* Set default 3-column layout for desktop */
+.service-box, .review-box {
+    width: calc(33.333% - 20px);
+    max-width: 400px;
+    min-width: 250px;
+}
 
+/* Switch to 1-column on mobile */
+@media (max-width: 768px) {
+    .service-box, .review-box {
+        width: 90%;
+        max-width: 400px;
+    }
+}
 
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
 
+.address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+ .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.menu-toggle {
+    display: none; /* Hide menu toggle on desktop */
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Show menu button on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Mobile Navigation */
+.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* When toggled, show the menu */
+.navigation.active {
+    display: flex;
+    flex-direction: column;
+}
 
 
