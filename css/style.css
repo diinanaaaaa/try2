@@ -691,5 +691,38 @@ html, body {
         padding: 10px;
     }
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Mengecilkan teks secara umum */
+    }
+
+    h1 {
+        font-size: 22px; /* Mengecilkan heading */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p, a, span {
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Mengecilkan teks dalam navigation */
+    }
+
+    .service-box p, .review-box p {
+        font-size: 14px; /* Mengecilkan teks dalam service dan review */
+    }
+
+    .btn {
+        font-size: 14px; /* Mengecilkan teks dalam butang */
+    }
+}
 
 
