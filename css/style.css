@@ -823,27 +823,20 @@ h1, h2, h3 {
 
 
 @media (max-width: 768px) {
-    .location-navigation {
-        background: none; 
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-    }
-@media (max-width: 768px) {
     .location-links {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 10px; 
+        grid-template-columns: repeat(3, 1fr); /* 3 item dalam satu baris pertama */
+        gap: 10px;
         justify-content: center;
         max-width: 90%;
         margin: auto;
     }
 
-   
+    /* Pastikan item ke-4 dan ke-5 masuk ke baris baru */
     .location-links li:nth-child(4),
     .location-links li:nth-child(5) {
-        grid-column: span 2;
-        justify-self: center; 
+        grid-column: span 2; /* Ambil 2 ruang supaya hanya ada 2 item */
+        justify-self: center; /* Pusatkan */
     }
 
     .location-links a {
@@ -858,6 +851,7 @@ h1, h2, h3 {
         text-decoration: none;
         font-weight: bold;
         transition: 0.3s;
+        width: 100%; /* Pastikan kotak tidak terlalu kecil */
     }
 
     .location-links a:hover {
