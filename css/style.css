@@ -829,21 +829,21 @@ h1, h2, h3 {
         border-radius: 10px;
         text-align: center;
     }
-
+@media (max-width: 768px) {
     .location-links {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 item dalam satu baris */
-        gap: 10px; /* Jarak antara butang */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px; 
         justify-content: center;
         max-width: 90%;
         margin: auto;
     }
 
-    /* Buat baris kedua hanya ada 2 item */
+   
     .location-links li:nth-child(4),
     .location-links li:nth-child(5) {
-        grid-column: span 2; /* 2 item per baris */
-        justify-self: center; /* Pusatkan item */
+        grid-column: span 2;
+        justify-self: center; 
     }
 
     .location-links a {
