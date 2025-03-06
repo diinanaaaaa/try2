@@ -735,7 +735,7 @@ h1, h2, h3 {
     }
 }
 .service-box, .review-box {
-    width: 90%; /* Ensures better fit */
+    width: 100%; /* Ensures better fit */
     max-width: 450px;
     margin: 0 auto; /* Centers the box horizontally */
     text-align: center; /* Ensures text inside is centered */
