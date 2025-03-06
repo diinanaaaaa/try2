@@ -859,6 +859,45 @@ h1, h2, h3 {
         color: white;
     }
 }
+@media (max-width: 768px) {
+    .location-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 item dalam satu baris pertama */
+        gap: 10px;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Pastikan item ke-4 dan ke-5 masuk ke baris baru & di tengah */
+    .location-links li:nth-child(4),
+    .location-links li:nth-child(5) {
+        grid-column: span 3; /* Ambil keseluruhan baris supaya boleh diletakkan di tengah */
+        display: flex;
+        justify-content: center; /* Pusatkan */
+    }
+
+    .location-links a {
+        display: block;
+        text-align: center;
+        border: 2px solid #ff0000; /* Border merah */
+        background: none; /* Tiada background */
+        color: white; /* Teks putih */
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        width: 100%; /* Pastikan butang memenuhi ruang */
+    }
+
+    .location-links a:hover {
+        background: #ff0000; /* Hover efek merah */
+        color: white;
+    }
+}
 
 
 
