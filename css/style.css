@@ -740,6 +740,55 @@ h1, h2, h3 {
     width: 90%; /* Ensures better fit */
     max-width: 350px;
 }
+.banner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding-bottom: 20px; /* Tambah ruang bawah banner */
+    }
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ratakan ruang antara column */
+    gap: 10px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Elak column jadi terlalu kecil */
+}
+
+/* Untuk skrin kecil (mobile), buat column susun ke bawah */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+.footer-container {
+    font-size: 14px; /* Ubah ikut kesesuaian */
+}
+
+.footer-column h3 {
+    font-size: 16px; /* Tajuk column */
+}
+
+.footer-column p {
+    font-size: 13px; /* Isi dalam column */
+}
+
 
 
 
