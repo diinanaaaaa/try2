@@ -739,7 +739,13 @@ h1, h2, h3 {
 .service-box, .review-box {
     width: 90%; /* Ensures better fit */
     max-width: 350px;
+    margin: 0 auto; /* Centers the box horizontally */
+    text-align: center; /* Ensures text inside is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .banner {
     position: relative;
     width: 100%;
@@ -754,22 +760,22 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .banner {
-        padding-bottom: 20px; /* Tambah ruang bawah banner */
+        padding-bottom: 20px; 
     }
 }
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Ratakan ruang antara column */
+    justify-content: space-between; /
     gap: 10px;
 }
 
 .footer-column {
     flex: 1;
-    min-width: 200px; /* Elak column jadi terlalu kecil */
+    min-width: 200px; 
 }
 
-/* Untuk skrin kecil (mobile), buat column susun ke bawah */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -778,17 +784,71 @@ h1, h2, h3 {
     }
 }
 .footer-container {
-    font-size: 14px; /* Ubah ikut kesesuaian */
+    font-size: 14px; 
 }
 
 .footer-column h3 {
-    font-size: 16px; /* Tajuk column */
+    font-size: 16px; /* Column Title */
 }
 
 .footer-column p {
-    font-size: 13px; /* Isi dalam column */
+    font-size: 13px; /*content in the column*/
 }
 
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px; 
+}
+
+.banner {
+    text-align: center;
+    padding-top: 20px; 
+}
+@media (max-width: 768px) {
+    .header {
+        width: 100vw; 
+        height: auto; 
+        padding: 15px 0;
+    }
+}
+@media (max-width: 768px) {
+    .location-navigation {
+        background: rgba(0, 0, 0, 0.9); 
+        padding: 15px; 
+        border: 2px solid #ff0000; 
+        border-radius: 10px; 
+        margin: 10px; 
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+    }
+
+    .location-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .location-links a {
+        display: block;
+        background: #ff0000; 
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .location-links a:hover {
+        background: white;
+        color: #ff0000;
+        border: 1px solid #ff0000;
+    }
+}
 
 
 
