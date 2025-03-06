@@ -44,8 +44,6 @@ body {
     width: 150px;
 }
 
-
-
 /* Contact Buttons */
 .contact-info .btn {
     text-decoration: none;
@@ -819,8 +817,7 @@ h1, h2, h3 {
     .location-navigation {
         background: rgba(0, 0, 0, 0.9); 
         padding: 15px; 
-        border: 2px solid #ff0000; 
-        border-radius: 10px; 
+        border: 0px solid #ff0000; 
         margin: 10px; 
         text-align: center;
         box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
@@ -847,6 +844,11 @@ h1, h2, h3 {
         background: white;
         color: #ff0000;
         border: 1px solid #ff0000;
+    }
+}
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none; /* Sembunyikan pada desktop */
     }
 }
 
