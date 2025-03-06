@@ -824,39 +824,38 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .location-navigation {
-        background: rgba(0, 0, 0, 0.95); 
-        padding: 10px; 
-        border: 1px solid #ff0000; 
-        border-radius: 10px; 
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
-        max-width: 85%; 
-        margin: auto; 
+        background: none; 
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
     }
 
     .location-links {
         display: flex;
         flex-direction: column;
-        gap: 5px; 
+        gap: 5px;
+        align-items: center; 
     }
 
     .location-links a {
-        display: block;
-        background: #ff0000; 
-        color: white;
-        padding: 8px; 
-        font-size: 14px; 
-        border-radius: 3px; 
+        display: inline-block;
+        border: 2px solid #ff0000; 
+        background: none; 
+        color: #ff0000; 
+        padding: 5px 10px; 
+        font-size: 14px;
+        border-radius: 5px; 
         text-decoration: none;
         font-weight: bold;
         transition: 0.3s;
     }
 
     .location-links a:hover {
-        background: white;
-        color: #ff0000;
-        border: 1px solid #ff0000;
+        background: #ff0000;
+        color: white; 
     }
 }
+
 
 @media (max-width: 768px) {
     .nav-container {
