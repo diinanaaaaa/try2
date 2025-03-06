@@ -830,22 +830,28 @@ h1, h2, h3 {
         text-align: center;
     }
 
-        .location-links {
-        display: flex;
-        flex-wrap: wrap; /* Benarkan item turun ke baris baru */
-        justify-content: center; /* Pusatkan item */
+    .location-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 item dalam satu baris */
         gap: 10px; /* Jarak antara butang */
+        justify-content: center;
         max-width: 90%;
         margin: auto;
     }
 
+    /* Buat baris kedua hanya ada 2 item */
+    .location-links li:nth-child(4),
+    .location-links li:nth-child(5) {
+        grid-column: span 2; /* 2 item per baris */
+        justify-self: center; /* Pusatkan item */
+    }
+
     .location-links a {
-        flex: 1 1 calc(33.33% - 10px); /* 3 item per baris */
-        min-width: 120px; /* Elak terlalu kecil */
+        display: block;
         text-align: center;
         border: 2px solid #ff0000;
         background: none;
-        color: #ff0000;
+        color: white;
         padding: 8px 10px;
         font-size: 14px;
         border-radius: 5px;
@@ -854,16 +860,12 @@ h1, h2, h3 {
         transition: 0.3s;
     }
 
-    .location-links a:nth-child(4),
-    .location-links a:nth-child(5) {
-        flex: 1 1 calc(50% - 10px); /* 2 item per baris */
-    }
-
     .location-links a:hover {
         background: #ff0000;
         color: white;
     }
 }
+
 
 
 @media (max-width: 768px) {
