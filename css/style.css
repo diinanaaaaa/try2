@@ -647,9 +647,13 @@ html, body {
         align-items: center;
     }
 
-    .service-box, .review-box {
+    .service-box {
         width: 90%;
         max-width: 400px;
+    }
+	.review-box {
+        width: 100%;
+        max-width: 450px;
     }
 
     /* Navigation */
@@ -748,13 +752,20 @@ h1, h2, h3 {
     position: relative;
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    overflow: hidden;
 }
 
 .banner img {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
     display: block;
 }
+
 
 @media (max-width: 768px) {
     .banner {
@@ -808,28 +819,30 @@ h1, h2, h3 {
 }
 
 
-
 @media (max-width: 768px) {
     .location-navigation {
         background: rgba(0, 0, 0, 0.95); 
-        padding: 20px;
-        border: 0px solid #ff0000; 
-        border-radius: 15px;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        padding: 10px; 
+        border: 1px solid #ff0000; 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+        max-width: 85%; 
+        margin: auto; 
     }
 
     .location-links {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px; 
     }
 
     .location-links a {
         display: block;
         background: #ff0000; 
         color: white;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 8px; 
+        font-size: 14px; 
+        border-radius: 3px; 
         text-decoration: none;
         font-weight: bold;
         transition: 0.3s;
@@ -847,7 +860,7 @@ h1, h2, h3 {
         flex-direction: row; 
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 70%;
         padding: 0 15px;
     }
 
@@ -863,9 +876,9 @@ h1, h2, h3 {
     }
 }
 .footer-logo {
-    display: inline-block; /* Pastikan latar belakang ikut saiz imej */
-    background: white; /* Warna latar belakang */
-    border-radius: 10px; /* Untuk bucu bulat */
+    display: inline-block; 
+    background: white; 
+    border-radius: 10px; 
 }
 
 .footer-logo img {
