@@ -736,7 +736,7 @@ h1, h2, h3 {
 }
 .service-box, .review-box {
     width: 90%; /* Ensures better fit */
-    max-width: 350px;
+    max-width: 450px;
     margin: 0 auto; /* Centers the box horizontally */
     text-align: center; /* Ensures text inside is centered */
     display: flex;
@@ -805,51 +805,6 @@ h1, h2, h3 {
 .banner {
     text-align: center;
     padding-top: 20px; 
-}
-@media (max-width: 768px) {
-    .header {
-        width: 100vw; 
-        height: auto; 
-        padding: 15px 0;
-    }
-}
-@media (max-width: 768px) {
-    .location-navigation {
-        background: rgba(0, 0, 0, 0.9); 
-        padding: 15px; 
-        border: 0px solid #ff0000; 
-        margin: 10px; 
-        text-align: center;
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
-    }
-
-    .location-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px; 
-    }
-
-    .location-links a {
-        display: block;
-        background: #ff0000; 
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .location-links a:hover {
-        background: white;
-        color: #ff0000;
-        border: 1px solid #ff0000;
-    }
-}
-@media (min-width: 769px) {
-    .mobile-only {
-        display: none; /* Sembunyikan pada desktop */
-    }
 }
 
 
