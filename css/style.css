@@ -241,12 +241,20 @@ body {
 
 /* Reviews Section */
 
+/* Default: Desktop - 3 columns */
 .review-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 20px; /* Adjust spacing between items */
     justify-content: center;
     padding: 20px;
+}
+
+/* Mobile: 1 column per row */
+@media (max-width: 768px) {
+    .review-container {
+        grid-template-columns: 1fr; /* Only 1 column per row on mobile */
+    }
 }
 
 .review-section {
@@ -691,38 +699,47 @@ html, body {
         padding: 10px;
     }
 }
+html {
+    font-size: 16px; /* Default font size */
+}
+
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Mengecilkan teks secara umum */
-    }
-
-    h1 {
-        font-size: 22px; /* Mengecilkan heading */
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    p, a, span {
-        font-size: 14px;
-    }
-
-    .nav-links a {
-        font-size: 14px; /* Mengecilkan teks dalam navigation */
-    }
-
-    .service-box p, .review-box p {
-        font-size: 14px; /* Mengecilkan teks dalam service dan review */
-    }
-
-    .btn {
-        font-size: 14px; /* Mengecilkan teks dalam butang */
+    html {
+        font-size: 14px; /* Reduce font size for smaller screens */
     }
 }
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Even smaller for very small screens */
+    }
+}
+.your-class {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+h1, h2, h3 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.btn {
+    font-size: clamp(14px, 3vw, 18px);
+    padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 20px);
+}
+.nav-links a {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+.service-box, .review-box {
+    width: 90%; /* Ensures better fit */
+    max-width: 350px;
+}
+
 
 
